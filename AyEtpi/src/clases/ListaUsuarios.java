@@ -1,12 +1,12 @@
 package clases;
 import contenedores.*;
 
-public class ListaAutos extends Lista1DLinkedL {
-	
+public class ListaUsuarios extends Lista1DLinkedL{
+
 	@Override
 	public boolean iguales(Object elementoL, Object elemento) {
-		Auto A=(Auto)elementoL;
-		Auto B=(Auto)elemento;
+		Usuario A=(Usuario)elementoL;
+		Usuario B=(Usuario)elemento;
 		return (A.equals(B));
 	}
 
