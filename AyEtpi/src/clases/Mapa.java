@@ -10,8 +10,8 @@ public class Mapa extends GrafoDirigido{
 	private ListaUsuarios usuarios;
 	Map<String, Integer> puntosUnicos;
 	
-	public Mapa() {
-		this.matrizCosto=
+	public Mapa(int orden) {
+		super(orden);
 		autos=new ListaAutos();
 		usuarios=new ListaUsuarios();
 	}
