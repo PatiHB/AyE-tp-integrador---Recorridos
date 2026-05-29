@@ -4,13 +4,14 @@ import java.util.*;
 
 import grafoDirigido.*;
 
-public class Mapa extends GrafoDirigido{
+public class Mapa{
+	private GrafoDirigido grafo;
 	private ListaAutos autos;
 	private ListaUsuarios usuarios;
 	private Map<String, Integer> puntosUnicos;
 	
-	public Mapa(int orden) {
-		super(orden);
+	public Mapa() {
+		grafo=null;
 		autos=new ListaAutos();
 		usuarios=new ListaUsuarios();
 		puntosUnicos=null;
@@ -32,7 +33,6 @@ public class Mapa extends GrafoDirigido{
 			System.out.println("agregarUsuario: La posición no existe");
 		}
 	}
-	
 	public void eliminarUsuario(int pos) {
 		autos.eliminar(pos);
 	}
@@ -42,5 +42,8 @@ public class Mapa extends GrafoDirigido{
 	
 	public void cargarHash(Map<String, Integer> M) {
 		puntosUnicos=M;
+	}
+	public void cargarGrafo(GrafoDirigido G) {
+		grafo=G;
 	}
 }
